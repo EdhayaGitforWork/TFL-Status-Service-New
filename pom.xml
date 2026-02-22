@@ -56,16 +56,7 @@
       <artifactId>protobuf-java-util</artifactId>
       <version>3.25.1</version>
     </dependency>
-    <!-- Actuator -->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-actuator</artifactId>
-    </dependency>
-    <!-- Micrometer -->
-    <dependency>
-        <groupId>io.micrometer</groupId>
-        <artifactId>micrometer-registry-prometheus</artifactId>
-    </dependency>
+
 
   </dependencies></dependencyManagement>
 	<dependencies>
