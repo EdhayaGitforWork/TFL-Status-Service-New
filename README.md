@@ -68,7 +68,7 @@ curl -H "Accept-Version: v1" http://localhost:8080/api/line/disruptions/unplanne
 If you have `grpcurl` installed:
 ```bash
 # Get Line Status
-grpcurl -plaintext -d '{"line_id": "northern"}' localhost:9090 com.ig.group.tfl.status.TubeStatusService/GetLineStatus
+grpcurl -plaintext -d "{\"line_id\": \"central\"}" localhost:9090 com.ig.group.tfl.status.TubeStatusService/GetLineStatus
 
 # Get Unplanned Disruptions
 grpcurl -plaintext localhost:9090 com.ig.group.tfl.status.TubeStatusService/GetUnplannedDisruptions
