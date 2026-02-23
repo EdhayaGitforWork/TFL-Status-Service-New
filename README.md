@@ -10,7 +10,7 @@ This service was designed specifically to support up to **1 million Requests Per
 
 ### Dual Protocol Approach
 - **gRPC (Port 9090)**: Designed for ultra-high throughput machine-to-machine internal communication (e.g., trading platforms). Protocol Buffers (`.proto`) serialize much faster and use less bandwidth than standard JSON.
-- **REST via WebFlux (Port 8080)**: Exposed for standard developers, non-technical users, and browser-based interfaces (Swagger UI) using JSON over non-blocking HTTP (`Accept-Version: v1` Headers).
+- **REST via WebFlux (Port 8080)**: Exposed for standard developers, non-technical users over non-blocking HTTP (`Accept-Version: v1` Headers).
 
 ### Resilience Patterns Implemented
 1. **Circuit Breaker**: Halts requests if 5 consecutive calls to the TfL API fail, opening for 30 seconds before testing recovery (`Half-Open`). Returns `503 Service Unavailable` or `UNAVAILABLE`.
@@ -44,9 +44,7 @@ docker run -d -p 6379:6379 redis
 
 *(Required: Ensure the application is running)*
 
-### For Non-Technical Users (Interactive Browser)
-Simply navigate to your local interactive documentation:
-[http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+
 
 ### Using Built-in cURL (REST Version)
 *Note: Header versioning must be passed*
